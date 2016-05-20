@@ -3,5 +3,7 @@
 exports.token = (req, res, next) => {
   // don't do anything here - just for testing
   // middleware does it
-  res.sendStatus(200);
+  res.json({
+    payload: req.session
+  });
 };
