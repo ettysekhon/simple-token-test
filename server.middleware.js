@@ -44,6 +44,7 @@ exports.applySessionCookie = (req, res, next) => {
   }
 
   res.cookie(config.SESSION_COOKIE_NAME, sessionCookie, {
+    domain: '127.0.0.1',
     httpOnly: false,
     maxAge: config.SESSION_COOKIE_MAX_AGE
   });
