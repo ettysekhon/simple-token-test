@@ -42,7 +42,6 @@ exports.applySessionCookie = (req, res, next) => {
       username: ''
     };
     res.cookie(config.SESSION_COOKIE_NAME, sessionCookie, {
-      domain: 'false',
       httpOnly: false,
       maxAge: config.SESSION_COOKIE_MAX_AGE
     });
