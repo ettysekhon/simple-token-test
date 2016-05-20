@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const api = require('./api.routes');
 const middleware = require('./server.middleware.js');
 const app = express();
-const port = process.env.PORT || 8082;
+const port = process.env.PORT || 8080;
 
 const isDomainWhiteLited = (origin, host) => {
   const whiteListDomains = ['localhost:3001', 'http://localhost:8082'];
