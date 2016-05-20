@@ -41,11 +41,13 @@ exports.applySessionCookie = (req, res, next) => {
       uid,
       username: ''
     };
-    res.cookie(config.SESSION_COOKIE_NAME, sessionCookie, {
-      httpOnly: false,
-      maxAge: config.SESSION_COOKIE_MAX_AGE
-    });
   }
+
+  res.cookie(config.SESSION_COOKIE_NAME, sessionCookie, {
+    httpOnly: false,
+    maxAge: config.SESSION_COOKIE_MAX_AGE
+  });
+
   /* eslint-disable no-param-reassign */
   req.session = objectAssign({}, sessionCookie);
   /* eslint-enable no-param-reassign */
