@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 const isDomainWhiteLited = (origin, host) => {
-  const whiteListDomains = ['localhost:3001', 'http://localhost:8082'];
+  const whiteListDomains = ['http://currys.dev:3001', 'http://currys.dev', 'localhost:3001', 'http://localhost:8082'];
   return whiteListDomains.indexOf(origin) || whiteListDomains.indexOf(host) !== -1
       ? origin || host
       : null;
